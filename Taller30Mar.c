@@ -43,7 +43,7 @@ do{
 		default: printf( "Ingresa una opcion valida" );
 			
 		 
-	}}while( opcion != 0 );
+	}while( opcion != 0 );
 
 }
 
