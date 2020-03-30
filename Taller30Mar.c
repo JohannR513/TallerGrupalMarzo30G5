@@ -36,7 +36,19 @@ int menu( ){
     scanf("%d", &opc);
 
     return opc;
+
+do{
+   opc = menu( );
+	switch ( opc ){
+		default: printf( "Ingresa una opcion valida" );
+			
+		 
+	}}while( opcion != 0 );
+
 }
+
+}
+
 
 
 
