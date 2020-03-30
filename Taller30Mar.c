@@ -26,14 +26,14 @@ typedef enum tipoSangre{
 int menu( ){
 	
 	int opc;
-    printf("MENU:\n");
-	printf("=====================\n");
-    printf("1: Ingresar donador\n");
-    printf("2: ver muestas\n");
-	printf("3: transfusio\n");
-	printf("4: agregar paciente\n");
-    printf("0: Salir\n");
-    scanf("%d", &opc);
+    printf( "MENU:\n");
+    printf( "=====================\n" );
+    printf( "1: Ingresar donador\n" );
+    printf( "2: ver muestas\n" );
+    printf( "3: transfusio\n" );
+    printf( "4: agregar paciente\n" );
+    printf( "0: Salir\n" );
+    scanf( "%d", &opc );
 
     return opc;
 
