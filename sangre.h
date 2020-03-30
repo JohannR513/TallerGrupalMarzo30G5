@@ -21,3 +21,17 @@ typedef enum tipoSangre{
    	ONEG = 7,
    	ABNEG = 8
 }tipoSangre;
+
+int menu();
+
+void agrgarP();
+
+void eliminarP();
+
+void agregarD();
+
+void eliminarD();
+
+void transfusion();
+
+
