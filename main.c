@@ -7,7 +7,7 @@ int main(){
 do{
  opc = menu( );
 switch ( opc ){
-   case 1: ingresarDonador(){
+   case 1: ingresarDonador( ){
        break;
    case 2: 
        break;
