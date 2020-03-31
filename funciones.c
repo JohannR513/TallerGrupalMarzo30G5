@@ -15,7 +15,7 @@ int menu()
     return opc;
 }
 
-void donador(donante* punt)
+void donador( donante* punt )
 {
     int sangre;
     printf( "Nombre: " );
@@ -38,19 +38,19 @@ void donador(donante* punt)
     punt->donacion = 0;
 }
 
-void IngresarD( donante matriz[ ][ CAP ], int* RH, int cap)
+void IngresarD( donante matriz[ ][ CAP ], int* RH, int cap )
 {
     donante punt;
     donador( &punt );
 
     if ( RH[ punt.sangre ] < cap)
     {
-        matriz[ punt.sangre ][ RH[ punt.sangre ] ] = punt;
+        matriz[ punt.sangre ][ RH [ punt.sangre ] ] = punt;
         RH[ punt.sangre ]++;
     }
     else
     {
-        printf("no se puede donar\n");
+        printf( "no se puede donar\n" );
     }
 }
 
