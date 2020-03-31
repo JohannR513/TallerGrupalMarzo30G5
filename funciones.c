@@ -43,7 +43,7 @@ void IngresarD( donante matriz[ ][ CAP ], int* RH, int cap )
     donante punt;
     donador( &punt );
 
-    if ( RH[ punt.sangre ] < cap)
+    if ( RH[ punt.sangre ] < cap )
     {
         matriz[ punt.sangre ][ RH [ punt.sangre ] ] = punt;
         RH[ punt.sangre ]++;
