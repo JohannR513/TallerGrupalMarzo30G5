@@ -90,6 +90,7 @@ void muestras( int *tipo )
     }
 }
 
+
 void buscarSangre( donante matriz[ ][ CAP ], int *RH )
 {
     int i;
