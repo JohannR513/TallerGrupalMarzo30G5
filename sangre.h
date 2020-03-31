@@ -16,18 +16,18 @@ typedef enum tipoSangre{
 
 typedef struct donante
 {
-   char name[20];
+   char name[ 20 ];
    tipoSangre sangre;
    int edad;
    int donacion;
 }donante;
 
-void donador(donante* punt);
+void donador( donante* punt );
 
-void IngresarD(donante matriz[][CAP], int* RH, int cap);
+void IngresarD( donante matriz[ ][ CAP ], int* RH, int cap );
 
-void muestras(int* tipo);
+void muestras( int* tipo );
 
-void buscarSangre(donante matriz[][CAP], int* RH);
+void buscarSangre( donante matriz[ ][ CAP ], int* RH );
 
-void donar(donante matriz[][CAP], int *tipo, int cap);
+void donar( donante matriz[][CAP], int *tipo, int cap );
