@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#define CAP 100
 
 typedef struct paciente{
 	char nombre[ 15 ];
