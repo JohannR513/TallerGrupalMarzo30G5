@@ -2,7 +2,7 @@
 
 int menu()
 {
-	int opc;
+    int opc;
     printf( "MENU:\n");
     printf( "=====================\n" );
     printf( "1: Ingresar donador\n" );
