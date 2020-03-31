@@ -1,6 +1,4 @@
 #include "sangre.h"
-#define FILAS 8
-#define COLUMNAS 5
 
 typedef struct paciente{
 	char nombre[ 15 ];
