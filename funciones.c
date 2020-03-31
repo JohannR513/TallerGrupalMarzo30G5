@@ -41,12 +41,12 @@ void donador(donante* punt)
 void IngresarD( donante matriz[ ][ CAP ], int* RH, int cap)
 {
     donante punt;
-    donador(&punt);
+    donador( &punt );
 
-    if (RH[punt.sangre] < cap)
+    if ( RH[ punt.sangre ] < cap)
     {
-        matriz[punt.sangre][RH[punt.sangre]] = punt;
-        RH[punt.sangre]++;
+        matriz[ punt.sangre ][ RH[ punt.sangre ] ] = punt;
+        RH[ punt.sangre ]++;
     }
     else
     {
@@ -54,43 +54,43 @@ void IngresarD( donante matriz[ ][ CAP ], int* RH, int cap)
     }
 }
 
-void muestras(int *tipo)
+void muestras( int *tipo )
 {
     int i;
-    for (i = 0; i < 8; i++)
+    for ( i = 0; i < 8; i++ )
     {
-        switch (i)
+        switch ( i )
         {
             case 0:
-                printf("A+: ");
+                printf( "A+: " );
                 break;
             case 1:
-                printf("B+: ");
+                printf( "B+: " );
                 break;
             case 2:
-                printf("O+: ");
+                printf( "O+: " );
                 break;
             case 3:
-                printf("AB+: ");
+                printf( "AB+: " );
                 break;
             case 4:
-                printf("A-: ");
+                printf( "A-: " );
                 break;
             case 5:
-                printf("B-: ");
+                printf( "B-: " );
                 break;
             case 6:
-                printf("O-: ");
+                printf( "O-: " );
                 break;
             case 7:
-                printf("AB-: ");
+                printf( "AB-: " );
                 break;
         }
-        printf("%d\n", tipo[i]);
+        printf( "%d\n", tipo[ i ] );
     }
 }
 
-void buscarSangre(donante matriz[][ CAP ], int *RH )
+void buscarSangre( donante matriz[ ][ CAP ], int *RH )
 {
     int i;
     int sangre;
