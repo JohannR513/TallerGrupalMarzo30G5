@@ -1,32 +1,37 @@
-#include <sangre.h>
+#include "sangre.h"
 
+int main()
+{
+    donante matriz[8][CAP];
+    int tipo[8] = {};
+    int RH[8] = {};
+    int cap;
+    printf("Capacidad: ");
+    scanf("%d", &cap);
 
-int main(){
-User mat[8][MAX_CAP];
-int counts[8] = {};
-int groupSizes[8] = {};
-
-int cap;
-printf("Capacidad: ");
-scanf("%d", &cap);
-
-do{
- opc = menu( );
-switch ( opc ){
-   case 1: agrgarP( );
-       break;
-   case 2: eliminarP( ); 
-       break;
-   case 3: agregarD( );
-      break;
-   case 4: eliminarD( );
-      break;
-   case 5: transfusion( );
-      break;
-   case 0:
-      break;
-  default: printf( "Ingresa una opcion valida" );
-  }while( opcion != 0 );
-
-}
+    int opc;
+    do
+    {
+        opc = menu( );
+        switch (opc){
+            case 1:
+                IngresarD(matriz, RH, cap);
+                break;
+            case 2:
+                muestras(tipo);
+                break;
+            case 3:
+                buscarSangre(matriz, RH);
+                break;
+            case 4:
+                donar(matriz, tipo, cap);
+                break;
+            case 0:
+                break;
+            default:printf("Opcion invalida\n");
+                break;
+        }
+    } while (opc != 0);
+    printf("gracias por venir");
+    return 0;
 }
