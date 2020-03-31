@@ -28,7 +28,7 @@ int main()
                 break;
             case 0:
                 break;
-            default:printf("Opcion invalida\n");
+            default:printf("La opcion es invalida\n");
                 break;
         }
     } while (opc != 0);
