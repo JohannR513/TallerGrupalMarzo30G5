@@ -1,4 +1,3 @@
-#include <Taller30Mar.c>
 #include <sangre.h>
 
 
