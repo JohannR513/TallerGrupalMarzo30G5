@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "sangre.h"
 #define FILAS 8
 #define COLUMNAS 5
 
