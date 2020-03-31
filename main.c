@@ -32,6 +32,6 @@ int main()
                 break;
         }
     } while ( opc != 0 );
-    printf( "Gracias por venir :)" );
+    printf("Gracias por venir :)");
     return 0;
 }
