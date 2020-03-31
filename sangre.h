@@ -4,22 +4,22 @@
 #define CAP 10
 
 typedef enum tipoSangre{
-   	APOS = 1,
-   	BPOS = 2,
-   	OPOS = 3,
-   	ABPOS = 4,
-   	ANEG = 5,
-   	BNEG = 6,
-   	ONEG = 7,
-   	ABNEG = 8
+   APOS = 1,
+   BPOS = 2,
+   OPOS = 3,
+   ABPOS = 4,
+   ANEG = 5,
+   BNEG = 6,
+   ONEG = 7,
+   ABNEG = 8
 }tipoSangre;
 
 typedef struct donante
 {
-    char name[20];
-    tipoSangre sangre;
-    int edad;
-    int donacion;
+   char name[20];
+   tipoSangre sangre;
+   int edad;
+   int donacion;
 }donante;
 
 void donador(donante* punt);
