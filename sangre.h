@@ -1,16 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-#define CAP 100
 
-typedef struct paciente{
-	char nombre[ 15 ];
-	int edad, cedula, tipoSangre;
-}paciente;
-
-typedef struct donaciones{
-	char nombre[ 15 ];
-	int edad, cedula, tipoSangre;
-}donaciones;
+#define CAP 10
 
 typedef enum tipoSangre{
    	APOS = 1,
@@ -23,16 +14,20 @@ typedef enum tipoSangre{
    	ABNEG = 8
 }tipoSangre;
 
-int menu();
+typedef struct donante
+{
+    char name[20];
+    tipoSangre sangre;
+    int edad;
+    int donacion;
+}donante;
 
-void agrgarP();
+void donador(donante* punt);
 
-void eliminarP();
+void IngresarD(donante matriz[][CAP], int* RH, int cap);
 
-void agregarD();
+void muestras(int* tipo);
 
-void eliminarD();
+void buscarSangre(donante matriz[][CAP], int* RH);
 
-void transfusion();
-
-
+void donar(donante matriz[][CAP], int *tipo, int cap);
