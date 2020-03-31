@@ -18,27 +18,27 @@ int menu()
 void donador(donante* punt)
 {
     int sangre;
-    printf("Nombre: ");
-    scanf("%s", punt->name);
-    printf("edad: ");
-    scanf("%s", punt->edad);
+    printf( "Nombre: " );
+    scanf( "%s", punt->name );
+    printf( "edad: " );
+    scanf( "%s", punt->edad );
 
-    printf("Tipo de sangre: \n");
-    printf("1: A+\n");
-    printf("2: B+\n");
-    printf("3: O+\n");
-    printf("4: AB+\n");
-    printf("5: A-\n");
-    printf("6: B-\n");
-    printf("7: O-\n");
-    printf("8: AB-\n");
-    scanf("%d", &sangre);
+    printf( "Tipo de sangre: \n" );
+    printf( "1: A+\n" );
+    printf( "2: B+\n" );
+    printf( "3: O+\n" );
+    printf( "4: AB+\n" );
+    printf( "5: A-\n" );
+    printf( "6: B-\n" );
+    printf( "7: O-\n" );
+    printf( "8: AB-\n" );
+    scanf( "%d", &sangre );
     punt->sangre = sangre;
 
     punt->donacion = 0;
 }
 
-void IngresarD(donante matriz[][CAP], int* RH, int cap)
+void IngresarD( donante matriz[ ][ CAP ], int* RH, int cap)
 {
     donante punt;
     donador(&punt);
@@ -90,61 +90,61 @@ void muestras(int *tipo)
     }
 }
 
-void buscarSangre(donante matriz[][CAP], int *RH)
+void buscarSangre(donante matriz[][ CAP ], int *RH )
 {
     int i;
     int sangre;
-    printf("Tipo de sangre: \n");
+    printf( "Tipo de sangre: \n" );
     printf( "=====================\n" );
-    printf("1: A+\n");
-    printf("2: B+\n");
-    printf("3: O+\n");
-    printf("4: AB+\n");
-    printf("5: A-\n");
-    printf("6: B-\n");
-    printf("7: O-\n");
-    printf("8: AB-\n");
-    scanf("%d", &sangre);
+    printf( "1: A+\n" );
+    printf( "2: B+\n" );
+    printf( "3: O+\n");
+    printf( "4: AB+\n" );
+    printf( "5: A-\n" );
+    printf( "6: B-\n" );
+    printf( "7: O-\n" );
+    printf( "8: AB-\n" );
+    scanf( "%d", &sangre );
 
-    printf("Donante:\n");
-    for (i = 0; i < RH[sangre]; i++)
+    printf( "Donante:\n" );
+    for ( i = 0; i < RH[sangre]; i++ )
     {
-        printf("Nombre: %s\n", matriz[sangre][i].name);
-        printf("edad: %s\n", matriz[sangre][i].edad);
-        printf("donacion: %d\n", matriz[sangre][i].donacion);
-        printf("===============\n");
+        printf( "Nombre: %s\n", matriz[ sangre ][ i ].name );
+        printf( "edad: %s\n", matriz[ sangre ][ i ].edad );
+        printf( "donacion: %d\n", matriz[ sangre ][ i ].donacion );
+        printf( "===============\n" );
     }
 }
 
-void donar(donante matriz[][CAP], int *tipo, int cap)
+void donar( donante matriz[ ][ CAP ], int *tipo, int cap )
 {
-    char name[10];
+    char name[ 10 ];
     int donacion;
     int i, j, num = 0;
-    printf("Nombre: ");
-    scanf("%s", name);
-    printf("donacion: ");
-    scanf("%d", &donacion);
+    printf( "Nombre: " );
+    scanf( "%s", name );
+    printf( "donacion: " );
+    scanf( "%d", &donacion );
 
-    for (i = 0; i < 8; i++)
+    for ( i = 0; i < 8; i++ )
     {
-        for (j = 0; j < cap; j++)
+        for ( j = 0; j < cap; j++ )
         {
-            if (!strcmp(name, matriz[i][j].name))
+            if ( !strcmp( name, matriz[ i ][ j ].name ) )
             {
-                matriz[i][j].donacion += donacion;
+                matriz[ i ][ j ].donacion += donacion;
                 num = 1;
                 break;
             }
         }
         
-        if (num)
+        if ( num )
         {
-            tipo[i] += donacion;
+            tipo[ i ] += donacion;
             break;
         }
     }
 
-    if (!num)
-        printf("Este usuario no existe\n");
+    if ( !num )
+        printf( "Este usuario no existe\n" );
 }
