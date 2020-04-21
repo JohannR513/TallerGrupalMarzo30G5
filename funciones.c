@@ -1,5 +1,9 @@
 #include "sangre.h"
 
+/*  En general esta bn hecho y cumple con lo que pido. El código esta ordenado
+Se podría mejorar la manera en la que nombran variables y operaciones 
+Falta el makefile */
+
 int menu()
 {
     int opc;
@@ -21,7 +25,7 @@ void donador( donante* punt )
     printf( "Nombre: " );
     scanf( "%s", punt->name );
     printf( "edad: " );
-    scanf( "%s", punt->edad );
+    scanf( "%s", punt->edad ); // FIXME: falta el &
 
     printf( "Tipo de sangre: \n" );
     printf( "1: A+\n" );
@@ -59,7 +63,7 @@ void muestras( int *tipo )
     int i;
     for ( i = 0; i < 8; i++ )
     {
-        switch ( i )
+        switch ( i ) // FIXME: este sería un lugar muy bueno para usar enums
         {
             case 0:
                 printf( "A+: " );
@@ -127,7 +131,7 @@ void donar( donante matriz[ ][ CAP ], int *tipo, int cap )
     printf( "donacion: " );
     scanf( "%d", &donacion );
 
-    for ( i = 0; i < 8; i++ )
+    for ( i = 0; i < 8; i++ ) // FIXME: numero mágico
     {
         for ( j = 0; j < cap; j++ )
         {
@@ -146,6 +150,6 @@ void donar( donante matriz[ ][ CAP ], int *tipo, int cap )
         }
     }
 
-    if ( !num )
+    if ( !num ) //FIXME: adicionar llaves
         printf( "Este usuario no existe\n" );
 }
